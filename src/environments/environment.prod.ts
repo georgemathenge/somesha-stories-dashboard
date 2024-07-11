@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  BASE_URL : window["env"]["api"] ,
+  WEB_URL : window["env"]["url"],
+  production:true
 };
