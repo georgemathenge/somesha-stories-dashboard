@@ -1,9 +1,11 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+        "skipLibCheck": true,
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
+    "esModuleInterop": true,
     "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
@@ -17,6 +19,9 @@
       "es2020",
       "dom"
     ],
-    "useDefineForClassFields": false
-  }
+    "useDefineForClassFields": false,
+  },
+      "exclude": ["node_modules/@types/node"]
+      
+
 }

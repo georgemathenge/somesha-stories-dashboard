@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';import { RouterModule } from '@angular/router';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -15,23 +15,17 @@ import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
 // import { ToastrModule } from 'ngx-toastr';
 
-@NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forChild(AdminLayoutRoutes),
-    FormsModule,
-    HttpClientModule,
-    NgbModule,
-    ClipboardModule,
-    MatTableModule, MatPaginatorModule,
-     MatDialogModule,
-
-  ],
-  declarations: [
-    DashboardComponent,
-    UserProfileComponent,
-    TablesComponent,
-  ]
-})
+@NgModule({ declarations: [
+        DashboardComponent,
+        UserProfileComponent,
+        TablesComponent,
+    ], 
+    imports: [
+        MatTableModule,
+         MatPaginatorModule,
+        MatDialogModule,
+          RouterModule.forChild(AdminLayoutRoutes),
+    ],
+         providers: [provideHttpClient(withInterceptorsFromDi())] })
 
 export class AdminLayoutModule {}

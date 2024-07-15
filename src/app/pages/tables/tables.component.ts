@@ -2,7 +2,6 @@
 import { ApiService } from 'src/app/api.service';
 import { APIEndPoints } from 'src/app/statics/Endpoints';
 
-import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
@@ -14,6 +13,7 @@ import {
   MatDialogRef,
   MatDialogTitle,
 } from '@angular/material/dialog';
+import { Component, AfterViewInit, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-tables',
   templateUrl: './tables.component.html',
@@ -46,6 +46,7 @@ getGroups(){
      
      }
      if(res.status == 500){
+      
      }
      if(res.status == 340){
      }
