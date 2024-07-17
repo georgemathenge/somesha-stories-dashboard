@@ -12,18 +12,18 @@ import { TablesComponent } from '../../pages/tables/tables.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
-import { MatDialogModule } from '@angular/material/dialog';
-// import { ToastrModule } from 'ngx-toastr';
-
+import { CustomDialogComponent } from 'src/app/reusable/custom-dialog/custom-dialog.component';
 @NgModule({ declarations: [
         DashboardComponent,
         UserProfileComponent,
         TablesComponent,
+        CustomDialogComponent
+        
     ], 
     imports: [
         MatTableModule,
          MatPaginatorModule,
-        MatDialogModule,
+        NgbModule,
           RouterModule.forChild(AdminLayoutRoutes),
     ],
          providers: [provideHttpClient(withInterceptorsFromDi())] })

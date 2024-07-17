@@ -8,7 +8,7 @@
          aria-controls="sidenav-collapse-main">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse"  [ngbCollapse]="isCollapsed" id="sidenav-collapse-main">
+      <div class="collapse navbar-collapse"  [attr.aria-expanded]="isCollapsed" id="sidenav-collapse-main">
         <!-- Collapse header -->
         <div class="navbar-collapse-header d-md-none">
           <div class="row">
